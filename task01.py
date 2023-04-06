@@ -1,6 +1,9 @@
 # ls = [ 2 3 4 5 6 7]
 
 def check_sort_asc(ls):
+    if not isinstance(ls, (list, tuple)):
+        return False
+
     for index in range(len(ls) - 1):
         if ls[index] >= ls[index + 1]:
             return False
@@ -9,6 +12,8 @@ def check_sort_asc(ls):
 
 
 def check_sort_desc(ls):
+    if not isinstance(ls, (list, tuple)):
+        return False
     for index in range(len(ls) - 1):
         if ls[index] <= ls[index + 1]:
             return False
